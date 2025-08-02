@@ -3,8 +3,8 @@
 # Start X virtual framebuffer
 Xvfb :1 -screen 0 1920x1080x24 &
 
-# Start desktop environment
-su - zorin -c 'startxfce4 &'  # Zorin uses GNOME-based but XFCE works reliably in container
+# Start XFCE (Zorin Lite is XFCE-based)
+su - zorin -c 'startxfce4 &'  
 
 # Start VNC
 x11vnc -display :1 -usepw -forever -shared -rfbport 5900 &
