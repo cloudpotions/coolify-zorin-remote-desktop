@@ -9,11 +9,12 @@ services:
       - zorin-data:/home/zorin
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.zorin.rule=Host(`browse.myvacayaway.com`)"
+      - "traefik.http.routers.zorin.rule=Host(`yourwebsitehere.com`)"
       - "traefik.http.routers.zorin.entrypoints=websecure"
       - "traefik.http.routers.zorin.tls.certresolver=letsencrypt"
       - "traefik.http.services.zorin.loadbalancer.server.port=8080"
     environment:
       - VNC_PASSWORD=changeme
+
 volumes:
   zorin-data:
